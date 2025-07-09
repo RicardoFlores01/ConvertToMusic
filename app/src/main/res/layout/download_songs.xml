@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descarga música y vídeos"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/editTextUrl"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Pega el link de YouTube aquí"
+            android:background="@drawable/edittext_rounded_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:inputType="textUri" />
+
+        <ImageView
+            android:id="@+id/btnClean"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/clean"
+            android:contentDescription="Limpiar texto"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDescargar"
+            android:layout_width="170dp"
+            android:layout_height="48dp"
+            android:text="Audio"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="@null"
+            android:background="@drawable/none_redondoboton"
+            app:cornerRadius="0dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="20dp"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDescargarVideo"
+            android:layout_width="170dp"
+            android:layout_height="48dp"
+            android:text="Vídeo"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="@null"
+            android:background="@drawable/none_redondoboton"
+            app:cornerRadius="0dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="22dp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/progressDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:gravity="start"
+        android:layout_gravity="start"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:max="100"
+        android:progress="0"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:progressDrawable="@drawable/progress_horizontal_custom"
+    />
+
+    <ImageView
+        android:id="@+id/imageViewVideo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Imagen del video"
+        android:visibility="gone" />
+
+</LinearLayout>
